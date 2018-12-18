@@ -1,13 +1,10 @@
-var titles = document.getElementsByClassName("title");
-console.log(Array.isArray(titles));
-console.log(Array.isArray(Array.from(titles)));
+const banner = document.querySelector("#page-banner");
+console.log('#page-banner node type is:', banner.nodeType);
+console.log('#page-banner node type is:', banner.nodeName);
+console.log('#page-banner node type is:', banner.hasChildNodes());
 
-
- Array.from(titles).forEach(function(item){
-     console.log(item);
- }) 
-
-
+const clonedBanner = banner.cloneNode(true)
+console.log(clonedBanner)
 
 
 
@@ -25,11 +22,15 @@ console.log(Array.isArray(Array.from(titles)));
 
 
 
-// const titles = document.getElementsByClassName('title');
 
-// console.log(Array.isArray(titles));
-// console.log(Array.isArray(Array.from(titles)));
 
-// Array.from(titles).forEach(function(title){
-//   console.log(title);
-// });
+
+
+// const banner = document.querySelector('#page-banner');
+
+// console.log('#page-banner node type is:', banner.nodeType);
+// console.log('#page-banner node name is:', banner.nodeName);
+// console.log('#page-banner has child nodes:', banner.hasChildNodes());
+
+// const clonedBanner = banner.cloneNode(true);
+// console.log(clonedBanner);
