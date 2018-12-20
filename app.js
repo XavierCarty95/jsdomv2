@@ -1,35 +1,30 @@
-const list = document.querySelector('#book-list ul');
-const forms = document.forms;
-
-// delete books
-list.addEventListener('click', (e) => {
-  if(e.target.className == 'delete'){
-    const li = e.target.parentElement;
-    li.parentNode.removeChild(li);
-  }
-});
-
-// add books
-const addForm = forms['add-book'];
-addForm.addEventListener('submit', function(e){
-  e.preventDefault();
-
-  // create elements
-  const value = addForm.querySelector('input[type="text"]').value;
-  const li = document.createElement('li');
-  const bookName = document.createElement('span');
-  const deleteBtn = document.createElement('span');
-
-  // add text content
-  bookName.textContent = value;
-  deleteBtn.textContent = 'delete';
-
-  // add classes
- bookName.classList.add("name");
- deleteBtn.classList.add('delete');
-
-  // append to DOM
-  li.appendChild(bookName);
-  li.appendChild(deleteBtn);
-  list.appendChild(li);
-});
+var book = document.querySelector('li:first-child.name')
+undefined
+book 
+null
+var book = document.querySelector('li:first-child .name')
+undefined
+book 
+<span class=​"name">​Name of the Wind​</span>​
+book.getAttribute('class')
+"name"
+book.getAttribute('href')
+null
+book.setAttribute('class' , 'name-2')
+undefined
+book 
+<span class=​"name-2">​Name of the Wind​</span>​
+book 
+<span class=​"name-2">​Name of the Wind​</span>​
+book.hasAttribute('class')
+true
+book.hasAttribute('href')
+false
+book.removeAttribute('class')
+undefined
+book 
+<span>​Name of the Wind​</span>​
+book.setAttribute('class' , 'name' )
+undefined
+book 
+<span class=​"name">​Name of the Wind​</span>​
